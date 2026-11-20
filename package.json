@@ -1,0 +1,31 @@
+{
+  "name": "jvgg",
+  "version": "1.0.0",
+  "description": "desarrollo de nuestra api",
+  "main": "backend/src/app.js",
+  "scripts": {
+    "dev": "nodemon backend/src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvisca/jvgg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvisca/jvgg/issues"
+  },
+  "homepage": "https://github.com/jvisca/jvgg#readme",
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prisma": "^6.2.1"
+  }
+}

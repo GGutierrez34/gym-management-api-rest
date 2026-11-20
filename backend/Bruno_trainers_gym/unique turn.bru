@@ -1,0 +1,15 @@
+meta {
+  name: unique turn
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:3000/users/:dni/turns
+  body: none
+  auth: none
+}
+
+params:path {
+  dni: 1234568
+}

@@ -1,0 +1,22 @@
+meta {
+  name: add trainer
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/v1/trainer
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "dni": 1111111,
+    "name": "Juanma",
+    "activity": "Spinning",  
+    "timeSlot": "Night",
+    "age": 27,
+    "gender": "mas"
+  }
+}

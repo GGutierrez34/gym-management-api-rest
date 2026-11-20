@@ -1,0 +1,22 @@
+meta {
+  name: add user
+  type: http
+  seq: 14
+}
+
+post {
+  url: http://localhost:3000/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "dni": 9871231,
+    "name": "gaspiguti",
+    "email": "gutierre@gmail.com",  
+    "gender": "noche",
+    "age": 21,
+    "cellphone": 344543
+  }
+}
