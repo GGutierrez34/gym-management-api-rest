@@ -67,7 +67,7 @@ deleteUser = function(dni) {
         if (response.status === 200 || response.status === 204) {
             alert(`User with DNI: ${dni} deleted successfully.`);
             console.log(response);
-            showTrainers();
+            showusers();
         } else if (response.status === 404) {
             alert(`User with DNI ${dni} not found.`);
         } else if (response.status === 500) {

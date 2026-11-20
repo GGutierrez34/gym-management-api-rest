@@ -75,7 +75,7 @@ deleteTurn = function(id){
         if (response.status === 200 || response.status === 204) {
             alert(`Turn with ID: ${id} deleted successfully.`);
             console.log(response);
-            showTrainers();
+            showTurns();
         } else if (response.status === 404) {
             alert(`Turn with ID: ${id} not found.`);
         } else if (response.status === 500) {

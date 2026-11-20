@@ -4,7 +4,7 @@ Aplicación web full-stack y API REST diseñada para facilitar la gestión de un
 
 ## Funcionalidades
 
-- **Usuarios (Socios):** registro, consulta general e individual por DNI, edición y baja (con eliminación de turnos asociados).
+- **Usuarios (Socios):** registro, consulta general e individual por DNI, edición y eliminación (incluyendo sus turnos asociados).
 - **Entrenadores:** gestión CRUD completa por DNI, actividad asignada y franja horaria, con validaciones mediante `express-validator`.
 - **Turnos / Sesiones:** reserva, consulta global y por usuario, modificación y cancelación de clases (con asignación automática de entrenador disponible según actividad y franja horaria desde el frontend).
 - **Colección de pruebas:** colección de [Bruno](https://www.usebruno.com/) incluida en `backend/Bruno_trainers_gym/` con todos los endpoints listos para probar.
@@ -86,10 +86,10 @@ DATABASE_URL="postgresql://tp:123@localhost:5432/gym"
 #### Opción B: Con `docker run` directo
 
 ```bash
-docker run --name jvgg-db \
+docker run --name gym-db \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=postgres \
-  -e POSTGRES_DB=jvgg \
+  -e POSTGRES_DB=gym \
   -p 5432:5432 \
   -d postgres:17
 ```
@@ -97,7 +97,7 @@ docker run --name jvgg-db \
 Configurá `.env` con:
 
 ```env
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/jvgg"
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/gym"
 ```
 
 ### 4. Aplicar migraciones y generar Prisma Client
@@ -116,7 +116,11 @@ npx prisma generate
 Desde la raíz del proyecto:
 
 ```bash
+# Modo desarrollo (con recarga automática vía nodemon)
 npm run dev
+
+# Modo normal
+npm start
 ```
 
 La API quedará disponible en `http://localhost:3000`.
@@ -139,7 +143,7 @@ Abrí directamente `frontend/pag.html` en tu navegador.
 
 > **Nota:** Si reiniciás la computadora y ya habías creado el contenedor de la base de datos, solo necesitás volver a iniciarlo antes de correr `npm run dev`:
 > - Con Docker Compose: `docker compose -f backend/compose.yml start`
-> - Con `docker run`: `docker start jvgg-db`
+> - Con `docker run`: `docker start gym-db`
 
 ## Modelo de datos
 

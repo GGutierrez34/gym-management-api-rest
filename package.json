@@ -1,23 +1,23 @@
 {
-  "name": "jvgg",
+  "name": "gym-management-api",
   "version": "1.0.0",
-  "description": "desarrollo de nuestra api",
+  "description": "API REST y aplicación web para la gestión de un gimnasio (usuarios, entrenadores y turnos)",
   "main": "backend/src/app.js",
   "scripts": {
+    "start": "node backend/src/app.js",
     "dev": "nodemon backend/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jvisca/jvgg.git"
-  },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "express",
+    "prisma",
+    "postgresql",
+    "rest-api",
+    "gym-management"
+  ],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jvisca/jvgg/issues"
-  },
-  "homepage": "https://github.com/jvisca/jvgg#readme",
   "dependencies": {
     "@prisma/client": "^6.2.1",
     "cors": "^2.8.5",

@@ -143,6 +143,7 @@ function putTrainer(event){
         console.error('Error:', error);
         alert('Error updating the trainer: ' + error.message);
     });
+}
 
 function clearFormPut(){
     document.getElementById('tr_name').value = '';
@@ -155,11 +156,12 @@ function clearFormPut(){
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const dni = urlParams.get('dni');
+    const trainerDniElement = document.getElementById('trainer-dni');
 
-    if (dni) {
-        document.getElementById('trainer-dni').textContent = `DNI: ${dni}`;
+    if (dni && trainerDniElement) {
+        trainerDniElement.textContent = `DNI: ${dni}`;
     }
-})}
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
